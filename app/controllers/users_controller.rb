@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 
   def display
     @hello = "hello world"
-    @users = User.first(10000)
+    @users = User.first(50000)
+    @another_users = User.first(50000)
   end
 
   # GET /users
