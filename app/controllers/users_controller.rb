@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def ten_thousands_result
-    Rails.cache.fetch("first_the_50000", expires_in: 15.seconds) do
+    Rails.cache.fetch("first_the_50000", expires_in: 50.seconds) do
       User.first(50000)
     end
   end
